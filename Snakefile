@@ -16,6 +16,7 @@ rule PLEK:
      prefix = "{sample}_lncRNA"
    output:
        "{sample}_lncRNA_pos_seq_desc"
+   conda: 'env/env-plek.yaml' 
    shell:
       """
       PLEK -f {input} -o {params.prefix} 
