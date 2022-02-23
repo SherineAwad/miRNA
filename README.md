@@ -4,10 +4,10 @@
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 
-Snakemake Workflow for lncRNA  
-==========================================
+Snakemake Workflow for  miRNA detection  
+===========================================
 
-This is a snakemake pipeline to differentiate lncRNAs from mRNAs.
+This is a snakemake pipeline to detect miRNA in samples.
 
 Your samples names should be listed by default in **samples.tsv** file. You can change this file name in *config file* if needed by editing the **SAMPLES** entry in the *config file*.
 The pipeline takes samples in  **fasta format** as input. The **samples.tsv** should contain your samples names without the ".fa" suffix. 
@@ -66,6 +66,4 @@ or:
     snakemake -j1 configfile config-WGS.yaml 
 
 
-### References 
 
-1. Li, A., Zhang, J., & Zhou, Z. (2014). PLEK: a tool for predicting long non-coding RNAs and messenger RNAs based on an improved k-mer scheme. BMC bioinformatics, 15(1), 1-10.

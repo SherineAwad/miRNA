@@ -1,1 +1,6 @@
 SAMPLES : "samples.tsv"
+GENOME: /rds/project/rds-O11U8YqSuCk/SM/annotations/Homo_sapiens/Ensembl/GRCh37/Sequence/WholeGenomeFasta/ 
+PREFIX: "mature"
+miRNA: "mature.fa"
+PAIRED: FALSE 
+miRDEEP2: /rds/project/rds-O11U8YqSuCk/SM/tools/mirdeep2/bin
