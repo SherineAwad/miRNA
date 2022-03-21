@@ -1,8 +1,6 @@
 # conda environment configuration for snakemake --use-conda
 channels:
     - bioconda
-    - conda-forge
     - defaults
-
 dependencies:
-    - plek=1.2
+    - trim-galore=0.6.7 

@@ -10,7 +10,6 @@ Snakemake Workflow for  miRNA detection
 This is a snakemake pipeline to detect miRNA in samples.
 
 Your samples names should be listed by default in **samples.tsv** file. You can change this file name in *config file* if needed by editing the **SAMPLES** entry in the *config file*.
-The pipeline takes samples in  **fasta format** as input. The **samples.tsv** should contain your samples names without the ".fa" suffix. 
 
 
 ### Run the pipeline 

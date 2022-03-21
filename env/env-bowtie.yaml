@@ -1,0 +1,7 @@
+# conda environment configuration for snakemake --use-conda
+channels:
+    - bioconda
+    - defaults
+
+dependencies:
+    - bowtie=1.3.1

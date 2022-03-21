@@ -36,6 +36,7 @@ rule bowtie_index:
        expand("{prefix}.4.ebwt", prefix = config['PREFIX']),
        expand("{prefix}.rev.1.ebwt", prefix = config['PREFIX']), 
        expand("{prefix}.rev.2.ebwt", prefix = config['PREFIX'])
+    conda: 'env/env-bowtie.yaml'
     shell: 
        """
        bowtie-build {input.genome} {params.PREFIX}  
@@ -63,7 +64,8 @@ if config['PAIRED']:
          "fastp/{sample}.r_1_val_1.fq.gz",
          "fastp/{sample}.r_2_val_2.fq.gz",
        params: 
-         PREFIX = config['PREFIX'] 
+         PREFIX = config['PREFIX']
+       conda: 'env/env-bowtie.yaml' 
        output: 
          "{sample}.sam" 
        shell: 
@@ -92,6 +94,7 @@ else:
           PREFIX = config['PREFIX']
         output:
            "{sample}.sam"
+        conda: 'env/env-bowtie.yaml'
         shell:
          """
          bowtie -x {params.PREFIX} {input[0]} 
