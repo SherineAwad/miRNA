@@ -9,8 +9,23 @@ Snakemake Workflow for  miRNA detection
 
 This is a snakemake pipeline to detect miRNA in samples.
 
-Your samples names should be listed by default in **samples.tsv** file. You can change this file name in *config file* if needed by editing the **SAMPLES** entry in the *config file*.
+#### Edit the configfile 
 
+You will need to edit your config file as described below:
+
+| Config Variable      | Description                                                      |
+| ---------------------| -----------------------------------------------------------------|
+| SAMPLES              | name of file containing your samples names, default: samples.tsv |
+| GENOME               | Path to your genome file                                         |
+| PREFIX               | Name of the prefix of the genome to align to "mature"            |
+| miRNA                | default is "mature.fa" pulled automatically from mirbase         |
+| PAIRED               | True if your samples are paired, false otherwise                 |
+
+The pipeline takes samples with a suffix 'r_1.fq.gz' and 'r_2.fq.gz' if the samples are paired. Or it takes samples with suffix 'fq.gz' if the samples is single-end reads. 
+
+Regardless your samples are paired, single-ended, samples names should be **samples.tsv** without the suffix.
+
+The pipeline uses by default "mature.fa" from mirbase. 
 
 ### Run the pipeline 
 
